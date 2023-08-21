@@ -1,2 +1,3 @@
-def pow(a, b):
-    return a ^ b
+def power(a, b):
+    return pow(a, b)
+print(power(3, 2))
