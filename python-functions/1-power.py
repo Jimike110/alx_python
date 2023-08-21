@@ -1,3 +1,5 @@
-def power(a, b):
-    return pow(a, b)
-print(power(a, b))
+def pow(a, b):
+    num = 1
+    for i in range(b):
+        num *= a
+    return num
