@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import random
-number = -98
+number = random.randint(-10000, 10000)
 
 # Get the last digit of the number
 last_digit = abs(number) % 10  # Extract the last digit using modulo
