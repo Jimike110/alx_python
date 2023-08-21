@@ -18,4 +18,4 @@ else:
     message = "and is less than 6 and not 0"
 
 # Print the result
-print("The string Last digit of", number, "is", last_digit, message)
+print("Last digit of", number, "is", last_digit, message)
