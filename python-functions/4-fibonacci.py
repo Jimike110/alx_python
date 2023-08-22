@@ -1,8 +1,10 @@
 def fibonacci_sequence(n):
     result = []
     num = 0
-    if n <= 1:
-        result.append(n)
+    if n == 1:
+        result.append(0)
+        return result
+    elif n <= 0:
         return result
     result.append(num)
     result.append(1)
