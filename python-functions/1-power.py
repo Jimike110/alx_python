@@ -1,3 +1,9 @@
+# Write a function that computes a to the power of b and return the value.
+
+# Prototype: def pow(a, b):
+# Returns the value of a ^ b
+# You are not allowed to import any module
+
 def pow(a, b):
     # Base case: Any number raised to the power of 0 is 1
     if b == 0:

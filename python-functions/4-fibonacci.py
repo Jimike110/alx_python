@@ -1,3 +1,10 @@
+# Write a Python function called fibonacci_sequence that takes a number n as input and returns a list of the first n Fibonacci numbers.
+
+# Prototype: def fibonacci_sequence(n)
+# Returns a list of the first n Fibonacci numbers.
+# You are not allowed to import any module.
+# Return an empty list if the it is not possible to generate the Fibonacci numbers for n
+
 def fibonacci_sequence(n):
     result = []
     num = 0
