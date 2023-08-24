@@ -6,7 +6,7 @@ def is_prime(number):
             prime = False
             break
     if number <= 1:
-        prime = False
+        return False
     elif prime:
         return True
     else:
