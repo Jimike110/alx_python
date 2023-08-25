@@ -28,8 +28,6 @@ def validate_password(password):
             
     # Check if all conditions are met
     if has_uppercase and has_lowercase and has_digit and len(password) >= 8 and not has_space:
-        print(password, "fits.")
         return True
     else:
-        print(password, "does not fit.")
         return False
