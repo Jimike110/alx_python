@@ -17,5 +17,7 @@ def safe_print_division(a, b):
         if result is not None:
             print("Inside result: {}".format(result))
         else:
-            print("None")
+            print("Inside result = None")
         return result
+
+safe_print_division(10, 0)
