@@ -12,12 +12,12 @@ def safe_print_division(a, b):
     try:
         result = a / b
     except ZeroDivisionError:
-        result = None
+        print("None")
+    else:
+        print("Inside result: {}".format(result))
     finally:
-        if result is not None:
-            print("Inside result: {}".format(result))
-            return result
-        else:
-            print("Inside result = None")
+        return result if 'result' in locals() else None
 
-safe_print_division(10, )
+# Test cases
+print(safe_print_division(10, 5))  # Should print division result and return 2.0
+print(safe_print_division(10, 0))  # Should print "None" and return None
