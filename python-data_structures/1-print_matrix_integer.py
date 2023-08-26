@@ -18,13 +18,3 @@ def print_matrix_integer(matrix=[[]]):
             print("{:d}".format(matrix[i][j]), end=" ")
         print()  # Move to the next line after each row
 
-
-# Define the matrix
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-
-# Call the function with the defined matrix
-print_matrix_integer(matrix)
