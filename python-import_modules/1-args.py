@@ -15,7 +15,7 @@ if __name__ == "__main__":
         print("1 argument:")
         print("1:", argv[-1])
     elif len(argv) > 2:
-        print(len(argv) - 1, "arguments.")
+        print(len(argv) - 1, "arguments:")
         for index, arg in enumerate(argv[1:]):
             index += 1
             print(f"{index}: {arg}", end = "\n")
