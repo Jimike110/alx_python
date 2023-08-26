@@ -10,8 +10,12 @@
 
 def safe_print_division(a, b):
     try:
-        division = a / b
+        result = a / b
     except ZeroDivisionError:
-        print("None")
+        result = None
     finally:
-        print("Inside result: {}".format(division))
+        if result is not None:
+            print("Inside result: {}".format(result))
+        else:
+            print("None")
+        return result
