@@ -18,6 +18,3 @@ def safe_print_division(a, b):
     finally:
         return result if 'result' in locals() else None
 
-# Test cases
-print(safe_print_division(10, 5))  # Should print division result and return 2.0
-print(safe_print_division(10, 0))  # Should print "None" and return None
