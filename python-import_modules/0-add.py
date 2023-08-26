@@ -7,6 +7,8 @@
 # a and b must be defined in 2 different lines: a = 1 and another b = 2
 # Your program should print: <a value> + <b value> = <add(a, b) value> followed with a new line
 # You can only use the word {removed} once in your code
+# You are not allowed to use {removed} for importing or {removed}
+# Your code should not be executed when imported - by using {removed}
 
 if __name__ == "__main__":
     from add_0 import add
@@ -15,4 +17,4 @@ if __name__ == "__main__":
     b = 2
     sum = add(a, b)
 
-    print("{} + {} = {}.format(a, b, sum)")
+    print("{} + {} = {}".format(a, b, sum))
