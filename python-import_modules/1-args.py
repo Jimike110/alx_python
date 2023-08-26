@@ -11,11 +11,10 @@
 
 if __name__ == "__main__":
     from sys import argv
-
     if len(argv) == 1:
-        print("1 argument: \n")
+        print("1 argument:")
         print("1: ", argv)
     elif len(argv) > 1:
         print(len(argv), "arguments.")
-        for arg in argv:
-            print(f"{arg.index}: {arg}", end = "\n")
+        for index, arg in enumerate(argv):
+            print(f"{index + 1}: {arg}", end = "\n")
