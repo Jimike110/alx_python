@@ -15,10 +15,8 @@ def print_matrix_integer(matrix=[[]]):
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
             # Print the element without moving to the next line
-            print("{}".format(matrix[i][j]), end=" ")
+            print("{:d}".format(matrix[i][j]), end=" ")
         print()  # Move to the next line after each row
-    if matrix is not list:
-        print(matrix)
 
 
 # Define the matrix
