@@ -18,4 +18,4 @@ if __name__ == "__main__":
     elif len(argv) > 1:
         print(len(argv), "arguments.")
         for arg in argv:
-            print(arg.index + 1 + ": " + arg, end = "\n")
+            print(str(arg.index + 1) + ": " + arg, end = "\n")
