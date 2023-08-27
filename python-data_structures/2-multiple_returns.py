@@ -7,11 +7,7 @@
 def multiple_returns(sentence):
     length = len(sentence)
     if length > 0:
-        length = len(sentence)
-        resultOne = (length, sentence[0])
-        print(resultOne)
-        return resultOne
+        first = sentence[0]
+        print("Length: {:d} - First character: {}".format(length, first))
     else:
-        resultTwo = (length, None)
-        print(resultTwo)
-        return resultTwo
+        print("Length: {:d} - First character: {}".format(length, None))
