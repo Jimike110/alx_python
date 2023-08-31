@@ -7,15 +7,10 @@
 
 
 def best_score(a_dictionary):
-    best_key = None
-    max_score = float("-inf")
-    all_values = list(a_dictionary.values())
+    scores_list = sorted(a_dictionary.values())
+    if len(scores_list) > 0:
+        return scores_list[-1]
 
-    if len(all_values) > 0:
-        for key, value in a_dictionary.items():
-            if value > max_score:
-                max_score = value
-                best_key = key
-        return best_key
-    return None
-    
+a_dictionary = {'John': 12, 'Bob': 14, 'Mike': 14, 'Molly': 16, 'Adam': 10}
+best_key = best_score(a_dictionary)
+print("Best score: {}".format(best_key))
