@@ -7,7 +7,6 @@
 # You are not allowed to import any module
 
 
-def update_dictionary(a_dictionary, key=str, value=any):
-    a_dictionary = {}
+def update_dictionary(a_dictionary, key, value):
     a_dictionary[key] = value
     return a_dictionary
