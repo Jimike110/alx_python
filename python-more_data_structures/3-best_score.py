@@ -7,14 +7,16 @@
 
 
 def best_score(a_dictionary):
-    if len(all_values) > 0 and a_dictionary is not None:
-        for key, value in a_dictionary.items():
-            best_key = None
-            max_score = float("-inf")
-            all_values = list(a_dictionary.values())
-            if value > max_score:
-                max_score = value
-                best_key = key
-        return best_key
+    if a_dictionary is not None:  # Check if the dictionary is not None
+        best_key = None
+        max_score = float("-inf")
+        all_values = list(a_dictionary.values())
+
+        if len(all_values) > 0:
+            for key, value in a_dictionary.items():
+                if value > max_score:
+                    max_score = value
+                    best_key = key
+            return best_key
     return None
     
