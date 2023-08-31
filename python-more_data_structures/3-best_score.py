@@ -11,7 +11,7 @@ def best_score(a_dictionary):
     max_score = float("-inf")
     all_values = list(a_dictionary.values())
 
-    if len(all_values) > 0:
+    if len(all_values) > 0 and a_dictionary != {}:
         for key, value in a_dictionary.items():
             if value > max_score:
                 max_score = value
