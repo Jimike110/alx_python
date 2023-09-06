@@ -4,6 +4,9 @@
 # You are not allowed to import any module
 
 class Square:
+    """
+    Module is documented. Lol.
+    """
     __size = None
 
     def __init__(self, __size):
