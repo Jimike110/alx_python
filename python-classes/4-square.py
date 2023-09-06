@@ -71,6 +71,5 @@ class Square:
                 print("#")
                 for j in range(self.size - 1):
                     print("#")
-                print("\n")
         else:
             print("\n")
