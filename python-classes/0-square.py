@@ -2,10 +2,12 @@
 # Private instance attribute: size
 # Instantiation with size (no type/value verification)
 # You are not allowed to import any module
-
+"""
+Module is documented.
+"""
 class Square:
     """
-    Module is documented. Lol.
+    Class is documented. Lol.
     """
     __size = None
 
