@@ -3,4 +3,4 @@
 # You are not allowed to import any module
 
 def is_same_class(obj, a_class):
-    if obj is instanceOf 
+    return isinstance(obj, a_class)
