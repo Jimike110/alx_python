@@ -6,7 +6,7 @@ This is the module docstring.
 It provides an overview of what this module contains.
 """
 
-class BaseGeometry(object):
+class BaseGeometry:
     """
     This is the BaseGeometry class.
     
@@ -16,4 +16,5 @@ class BaseGeometry(object):
     Methods:
         (None)
     """
-    pass
+    def __init_subclass__(cls):
+        pass
