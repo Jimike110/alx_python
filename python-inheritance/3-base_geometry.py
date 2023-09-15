@@ -6,7 +6,7 @@ This is the module docstring.
 It provides an overview of what this module contains.
 """
 
-class BaseGeometry:
+class BaseGeometry(object):
     """
     This is the BaseGeometry class.
     
