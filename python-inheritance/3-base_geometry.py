@@ -2,17 +2,37 @@
 # You are not allowed to import any module
 
 """
-This is the module docstring.
-It provides an overview of what this module contains.
+BaseGeometry class
 """
 
-class BaseGeometry:
+class TypeMetaClass(type):
     """
-    This is the BaseGeometry class.
-    
-    Attributes:
-        (None)
-    
-    Methods:
-        (None)
+    This is a metaclass used to represent the class type in order to eliminate
+    the inherited method init subclass
     """
+
+    def __dir__(cls):
+        """
+        Exclude attribute init subclass in dir()
+        """
+        attributes = super().__dir__()
+
+        return [
+            attribute for attribute in attributes if attribute != "__init_subclass__"
+        ]
+
+
+class BaseGeometry(metaclass=TypeMetaClass):
+    """
+    This is a base class
+    """
+
+    def __dir__(self):
+        """
+        Exclude attribute init subclass in dir()
+        """
+        attributes = super().__dir__()
+
+        return [
+            attribute for attribute in attributes if attribute != "__init_subclass__"
+        ]
