@@ -39,4 +39,4 @@ class BaseGeometry(metaclass=TypeMetaClass):
         ]
 
     def area(self):
-        raise Exception("area() is not defined")
+        raise Exception("area() is not implemented")
