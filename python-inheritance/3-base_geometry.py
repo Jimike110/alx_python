@@ -16,5 +16,3 @@ class BaseGeometry:
     Methods:
         (None)
     """
-    def __init_subclass__(cls):
-        pass
