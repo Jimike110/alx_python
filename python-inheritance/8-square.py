@@ -8,7 +8,21 @@
 BaseGeometry class
 """
 
-TypeMetaClass = __import__('7-rectangle').TypeMetaClass
+class TypeMetaClass(type):
+    """
+    This is a metaclass used to represent the class type in order to eliminate
+    the inherited method init subclass
+    """
+
+    def __dir__(cls):
+        """
+        Exclude attribute init subclass in dir()
+        """
+        attributes = super().__dir__()
+
+        return [
+            attribute for attribute in attributes if attribute != "__init_subclass__"
+        ]
 
 BaseGeometry = __import__('5-base_geometry').BaseGeometry
 
