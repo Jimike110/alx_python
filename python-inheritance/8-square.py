@@ -5,9 +5,7 @@
 #     the area() method must be implemented
 
 """
-Task 8: Square #1
-
-This module defines the Square class, which inherits from Rectangle.
+BaseGeometry class
 """
 
 class TypeMetaClass(type):
@@ -28,7 +26,27 @@ class TypeMetaClass(type):
 
 BaseGeometry = __import__('5-base_geometry').BaseGeometry
 
-Rectangle = __import__('7-rectangle.py').Rectangle
+class Rectangle(BaseGeometry):
+    """
+    Class Rectangle which inherits from BaseGeometry
+    """
+    def __init__(self, width, height):
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+        self._width = width
+        self._height = height
+
+    def area(self):
+        """
+        Calculate the area of the rectangle.
+        """
+        return self._width * self._height
+
+    def __str__(self):
+        """
+        Return a string representation of the rectangle.
+        """
+        return f"[Rectangle] {self._width}/{self._height}"
 
 class Square(Rectangle):
     """
