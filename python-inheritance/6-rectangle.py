@@ -49,6 +49,9 @@ class BaseGeometry(metaclass=TypeMetaClass):
             raise ValueError(f"{name} must be greater than 0")
         
 class Rectangle(BaseGeometry):
+    """
+    This is a Rectangle class that inherits from BaseGeometry.
+    """
     def __init__(self, width, height):
         self.integer_validator("width", width)
         self.integer_validator("height", height)
