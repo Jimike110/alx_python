@@ -11,7 +11,6 @@
 # Call the super class with id - this super call with use the logic of the __init__ of the Base class
 # Assign each argument width, height, x and y to the right attribute
 # Why private attributes with getter/setter? Why not directly public attribute?
-
 # Because we want to protect attributes of our class. With a setter, you are able to validate what a developer is trying to assign to a variable. 
 # So after, in your class you can “trust” these attributes.
 
@@ -23,32 +22,8 @@ Module: rectangle
 This module defines the Rectangle class, which inherits from the Base class.
 """
 
-class Base:
-    """
-    Class Base serves as the base class for other classes in the project.
-
-    Attributes:
-        __nb_objects (int): A private class attribute to manage the id attribute in all future classes.
-    """
-
-    __nb_objects = 0
-
-    def __init__(self, id=None):
-        """
-        Initializes a new instance of the Base class.
-
-        Args:
-            id (int, optional): The id for the instance. If provided, it will be assigned to the id attribute.
-                If not provided, the __nb_objects counter will be incremented and assigned as the id.
-
-        Note:
-            You can assume that id is an integer.
-        """
-        if id is not None:
-            self.id = id
-        else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+# Import the Base class from the base module
+Base = __import__('base').Base
 
 class Rectangle(Base):
     """
@@ -96,7 +71,7 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def _set_width(self, value):
+    def width(self, value):
         """
         Setter for the width attribute.
 
@@ -124,7 +99,7 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def _set_height(self, value):
+    def height(self, value):
         """
         Setter for the height attribute.
 
@@ -152,7 +127,7 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def _set_x(self, value):
+    def x(self, value):
         """
         Setter for the x-coordinate attribute.
 
@@ -172,7 +147,7 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def _set_y(self, value):
+    def y(self, value):
         """
         Setter for the y-coordinate attribute.
 
