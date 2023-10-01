@@ -7,6 +7,7 @@
 """
 BaseGeometry class
 """
+
 TypeMetaClass = __import__('7-rectangle').TypeMetaClass
 
 BaseGeometry = __import__('5-base_geometry').BaseGeometry
