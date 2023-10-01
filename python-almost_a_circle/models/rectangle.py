@@ -22,8 +22,32 @@ Module: rectangle
 This module defines the Rectangle class, which inherits from the Base class.
 """
 
-# Import the Base class from the base module
-Base = __import__('base').Base
+class Base:
+    """
+    Class Base serves as the base class for other classes in the project.
+
+    Attributes:
+        __nb_objects (int): A private class attribute to manage the id attribute in all future classes.
+    """
+
+    __nb_objects = 0
+
+    def __init__(self, id=None):
+        """
+        Initializes a new instance of the Base class.
+
+        Args:
+            id (int, optional): The id for the instance. If provided, it will be assigned to the id attribute.
+                If not provided, the __nb_objects counter will be incremented and assigned as the id.
+
+        Note:
+            You can assume that id is an integer.
+        """
+        if id is not None:
+            self.id = id
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
 
 class Rectangle(Base):
     """
