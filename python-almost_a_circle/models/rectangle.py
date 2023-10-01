@@ -12,7 +12,8 @@
 # Assign each argument width, height, x and y to the right attribute
 # Why private attributes with getter/setter? Why not directly public attribute?
 
-# Because we want to protect attributes of our class. With a setter, you are able to validate what a developer is trying to assign to a variable. So after, in your class you can “trust” these attributes.
+# Because we want to protect attributes of our class. With a setter, you are able to validate what a developer is trying to assign to a variable. 
+# So after, in your class you can “trust” these attributes.
 
 # models/rectangle.py
 
