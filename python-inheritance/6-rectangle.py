@@ -2,7 +2,6 @@
 # Instantiation with width and height: def __init__(self, width, height):
 #     width and height must be private. No getter or setter
 #     width and height must be positive integers, validated by integer_validator
-BaseGeometry = __import__('5-base_geometry').BaseGeometry
 
 """
 BaseGeometry class
@@ -23,6 +22,8 @@ class TypeMetaClass(type):
         return [
             attribute for attribute in attributes if attribute != "__init_subclass__"
         ]
+    
+BaseGeometry = __import__('5-base_geometry').BaseGeometry
         
 class Rectangle(BaseGeometry):
     """
