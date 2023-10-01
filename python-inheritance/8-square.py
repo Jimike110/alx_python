@@ -5,32 +5,47 @@
 #     the area() method must be implemented
 
 """
-BaseGeometry class
+Task 8: Square #1
+
+This module defines the Square class, which inherits from Rectangle.
 """
 
-class TypeMetaClass(type):
-    """
-    This is a metaclass used to represent the class type in order to eliminate
-    the inherited method init subclass
-    """
-
-    def __dir__(cls):
-        """
-        Exclude attribute init subclass in dir()
-        """
-        attributes = super().__dir__()
-
-        return [
-            attribute for attribute in attributes if attribute != "__init_subclass__"
-        ]
+TypeMetaClass = __import__('7-rectangle').TypeMetaClass
 
 BaseGeometry = __import__('5-base_geometry').BaseGeometry
 
 Rectangle = __import__('7-rectangle.py').Rectangle
 
 class Square(Rectangle):
+    """
+    Class Square which inherits from Rectangle.
+
+    Attributes:
+        _size (int): The size of the square.
+
+    Methods:
+        __init__(self, size): Initializes a new Square instance with the given size.
+        area(self): Calculates and returns the area of the square.
+    """
+
     def __init__(self, size):
+        """
+        Initializes a new Square instance.
+
+        Args:
+            size (int): The size of the square.
+
+        Raises:
+            ValueError: If size is not a positive integer.
+        """
+        self.integer_validator(size)
         self._size = size
-        self.integer_validator(self._size)
+
     def area(self):
+        """
+        Calculate the area of the square.
+
+        Returns:
+            int: The area of the square.
+        """
         return self._size ** 2
