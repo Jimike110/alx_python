@@ -28,6 +28,9 @@ class TypeMetaClass(type):
 BaseGeometry = __import__('5-base_geometry').BaseGeometry
 
 class Rectangle(BaseGeometry):
+    """
+    Class Rectangle which inherits from BaseGeometry
+    """
     def __init__(self, width, height):
         self._width = width
         self._height = height
