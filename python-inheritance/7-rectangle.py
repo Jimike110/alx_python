@@ -32,7 +32,19 @@ class Rectangle(BaseGeometry):
     Class Rectangle which inherits from BaseGeometry
     """
     def __init__(self, width, height):
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self._width = width
         self._height = height
-        self.area = width * height
-        # self.print = print(f"[Rectangle] {width}/{height}")
+
+    def area(self):
+        """
+        Calculate the area of the rectangle.
+        """
+        return self._width * self._height
+
+    def __str__(self):
+        """
+        Return a string representation of the rectangle.
+        """
+        return f"[Rectangle] {self._width}/{self._height}"
