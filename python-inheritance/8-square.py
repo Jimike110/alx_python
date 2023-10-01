@@ -26,27 +26,10 @@ class TypeMetaClass(type):
 
 BaseGeometry = __import__('5-base_geometry').BaseGeometry
 
-class Rectangle(BaseGeometry):
-    """
-    Class Rectangle which inherits from BaseGeometry
-    """
-    def __init__(self, width, height):
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self._width = width
-        self._height = height
-
-    def area(self):
-        """
-        Calculate the area of the rectangle.
-        """
-        return self._width * self._height
-
-    def __str__(self):
-        """
-        Return a string representation of the rectangle.
-        """
-        return f"[Rectangle] {self._width}/{self._height}"
+"""
+Class Rectangle which inherits from BaseGeometry
+"""
+Rectangle = __import__('7-rectangle').Rectangle
 
 class Square(Rectangle):
     """
