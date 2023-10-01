@@ -34,5 +34,5 @@ class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         self._width = width
         self._height = height
-        self.area = width * height
-        # self.print = print(f"[Rectangle] {width}/{height}")
+        self.area = print(width * height)
+        self.print = print(f"[Rectangle] {width}/{height}")
